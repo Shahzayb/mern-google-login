@@ -37,6 +37,7 @@ npm run dev
 ```
 
 ## Contributing
+I made this example & documentation in hurry.
 Please help me with the documentation and improve the code.
 I'll appreciate that. For changes, please open an issue first to discuss what you would like to change.
 
