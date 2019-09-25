@@ -35,3 +35,10 @@ Create config folder in your project's root. And create file in it with the name
 ```bash
 npm run dev
 ```
+
+## Contributing
+Please help me with the documentation and improve the code.
+I'll appreciate that. For changes, please open an issue first to discuss what you would like to change.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
