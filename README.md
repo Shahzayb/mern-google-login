@@ -33,8 +33,16 @@ Visit the [Google API Console](https://console.developers.google.com/) to obtain
 Store your client id in GoogleLogin's clientId prop
 
 ### 5. Server Side Environment Variables Setup
+From the root directory of the project, type:
+```bash
+mkdir config
 
-Create config folder in your project's root. And create file in it with the name of 'dev.env' and then add 'CLIENT_ID', 'CLIENT_SECRET', 'JWT_SECRET' AND 'DB_URL' variables in it and their values
+cd config
+
+touch dev.env
+```
+**Note: These commands are for Mac/Linux users only. Windows users should type these commands in git bash**
+Now open the dev.env file and add `CLIENT_ID=value from google apis`, `CLIENT_SECRET=value from google apis`, `JWT_SECRET=some secure random value` AND `DB_URL=your database url` variables in it and save.
 
 ### 6. Run 'dev' script
 ```bash
