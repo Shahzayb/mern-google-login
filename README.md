@@ -26,9 +26,10 @@ Visit the [Google API Console](https://console.developers.google.com/) to obtain
 **Note: You can use authorization grant code only one time.**
 
 ### 3. Add Authorized JavaScript Origins
-![image](https://user-images.githubusercontent.com/29760858/65581115-596d4d00-df94-11e9-8976-b1cbcaaffdbd.png)
-
-
+Go to [Google API Console](https://console.developers.google.com/). And select your project & then add JavaScript Origins Url
+![Capture](https://user-images.githubusercontent.com/29760858/65677289-c3582600-e06a-11e9-8a69-564a89dbe522.PNG)
+**This is a url of client side react app**
+**We don't need to add redirect URIs because we are using [one-time-code flow](https://developers.google.com/identity/sign-in/web/server-side-flow)**
 ### 4. Client Side Setup
 Store your client id in GoogleLogin's clientId prop
 
