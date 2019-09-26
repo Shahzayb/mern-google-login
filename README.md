@@ -58,7 +58,6 @@ npm run dev
 if you want more information, then please read the [one-time-code flow implementation](https://developers.google.com/identity/sign-in/web/server-side-flow)
 
 ## Contributing
-I made this example & documentation in hurry.
 Please help me with the documentation and improve the code.
 I'll appreciate that. For changes, please open an issue first to discuss what you would like to change.
 
