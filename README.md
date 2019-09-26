@@ -28,8 +28,11 @@ Visit the [Google API Console](https://console.developers.google.com/) to obtain
 ### 3. Add Authorized JavaScript Origins
 Go to [Google API Console](https://console.developers.google.com/). And select your project & then add JavaScript Origins Url
 ![Capture](https://user-images.githubusercontent.com/29760858/65677289-c3582600-e06a-11e9-8a69-564a89dbe522.PNG)
+
 **This is a url of client side react app**
+
 **We don't need to add redirect URIs because we are using [one-time-code flow](https://developers.google.com/identity/sign-in/web/server-side-flow)**
+
 ### 4. Client Side Setup
 Store your client id in GoogleLogin's clientId prop
 
@@ -43,6 +46,7 @@ cd config
 touch dev.env
 ```
 **Note: These commands are for Mac/Linux users only. Windows users should type these commands in git bash**
+
 Now open the dev.env file and add `CLIENT_ID=value from google apis`, `CLIENT_SECRET=value from google apis`, `JWT_SECRET=some secure random value` AND `DB_URL=your database url` variables in it and save.
 
 ### 6. Run 'dev' script
