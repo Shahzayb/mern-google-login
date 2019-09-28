@@ -19,11 +19,15 @@ export default props => {
 
   return (
     <GoogleLogin
-      clientId="paste your client id here"
+      clientId="222646766650-gqnkmntgaf988iqc2adh61rnge1310q8.apps.googleusercontent.com"
       buttonText="Login"
       responseType="code"
+      /**
+       * To get access_token and refresh_token in server side,
+       * the data for redirect_uri should be postmessage.
+       * postmessage is magic value for redirect_uri to get credentials without actual redirect uri.
+       */
       redirectUri="postmessage"
-      scope="openid email profile"
       onSuccess={responseGoogle}
       onFailure={responseGoogle}
       cookiePolicy={'single_host_origin'}

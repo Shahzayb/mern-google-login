@@ -6,7 +6,7 @@ exports.login = async (req, res) => {
   try {
     const code = req.body.code;
     const idToken = await googleAuth.getIdToken(code);
-    const profile = await googleAuth.getPayload(idToken);
+    const profile = await googleAuth.getProfileInfo(idToken);
 
     let user = await User.findOne({ googleId: profile.sub });
 
