@@ -7,6 +7,7 @@ export default props => {
     try {
       if (authResult['code']) {
         const result = await login(authResult['code']);
+        console.log(authResult);
         props.login(result);
       } else {
         // There was an error.
@@ -21,7 +22,6 @@ export default props => {
       clientId="paste your client id here"
       buttonText="Login"
       responseType="code"
-      accessType="offline"
       redirectUri="postmessage"
       scope="openid email profile"
       onSuccess={responseGoogle}

@@ -5,8 +5,8 @@ const User = require('../models/User');
 exports.login = async (req, res) => {
   try {
     const code = req.body.code;
-    const r = await googleAuth.getIdToken(code);
-    const profile = await googleAuth.getPayload(r);
+    const idToken = await googleAuth.getIdToken(code);
+    const profile = await googleAuth.getPayload(idToken);
 
     let user = await User.findOne({ googleId: profile.sub });
 

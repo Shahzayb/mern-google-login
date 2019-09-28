@@ -9,9 +9,6 @@ const client = new OAuth2Client(
 exports.getIdToken = async code => {
   const r = await client.getToken(code);
 
-  // Make sure to set the credentials on the OAuth2 client.
-  client.setCredentials(r.tokens);
-
   return r.tokens.id_token;
 };
 
