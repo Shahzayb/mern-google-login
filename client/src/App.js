@@ -1,6 +1,6 @@
 import React from 'react';
-import GoogleLogin from './components/GoogleLogin';
-import Profile from './components/Profile';
+import GoogleLogin from './components/GoogleLogin/GoogleLogin';
+import Profile from './components/Profile/Profile';
 
 class App extends React.Component {
   state = {
