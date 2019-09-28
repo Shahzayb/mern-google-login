@@ -11,14 +11,16 @@ And the image blow is from [google docs](https://developers.google.com/identity/
 
 ## Installation
 
-### 1. Clone the repository
+### 1. Clone the repository & install dependencies
 
 ```bash
 git clone https://github.com/Shahzayb/mern-google-login.git
 
 cd mern-google-login
 
-git install
+npm install
+
+cd client & npm install
 ```
 
 ### 2. Obtain OAuth 2.0 credentials from the Google API Console.
@@ -31,7 +33,7 @@ Go to [Google API Console](https://console.developers.google.com/). And select y
 
 **This is a url of client side react app**
 
-**We don't need to add redirect URIs because we are using [one-time-code flow](https://developers.google.com/identity/sign-in/web/server-side-flow)**
+**You'll notice in my code that I set the `redirect_uri` to `postmessage`, its because we need the access_token & id_token without any redirection**
 
 ### 4. Client Side Setup
 Store your client id in GoogleLogin's clientId prop
