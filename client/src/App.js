@@ -6,23 +6,19 @@ class App extends React.Component {
   state = {
     isLoggedIn: false,
     userProfile: null,
-    token: null
   };
 
-  login = userData => {
+  login = (userData) => {
     this.setState({
       isLoggedIn: true,
       userProfile: userData.user,
-      token: userData.token
     });
   };
 
-  logout = e => {
-    e.preventDefault();
+  logout = () => {
     this.setState({
       isLoggedIn: false,
       userProfile: null,
-      token: null
     });
   };
 

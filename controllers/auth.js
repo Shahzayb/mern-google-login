@@ -1,30 +1,20 @@
-const googleAuth = require('../utils/googleAuth');
-const generateToken = require('../utils/generateTokenById');
-const User = require('../models/User');
+const googleOAuth = require('../utils/googleOAuth');
 
 exports.login = async (req, res) => {
   try {
     const code = req.body.code;
-    const idToken = await googleAuth.getIdToken(code);
-    const profile = await googleAuth.getProfileInfo(idToken);
+    const profile = await googleOAuth.getProfileInfo(code);
 
-    let user = await User.findOne({ googleId: profile.sub });
+    const user = {
+      googleId: profile.sub,
+      name: profile.name,
+      firstName: profile.given_name,
+      lastName: profile.family_name,
+      email: profile.email,
+      profilePic: profile.picture,
+    };
 
-    if (!user) {
-      user = new User({
-        googleId: profile.sub,
-        name: profile.name,
-        firstName: profile.given_name,
-        lastName: profile.family_name,
-        email: profile.email,
-        profilePic: profile.picture
-      });
-      await user.save();
-    }
-
-    const token = generateToken(user.id);
-
-    res.send({ user, token });
+    res.send({ user });
   } catch (e) {
     console.log(e);
     res.status(401).send();

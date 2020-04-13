@@ -4,15 +4,15 @@ import { login } from '../../api/googleAuth';
 
 import './googleLogin.css';
 
-export default props => {
-  const responseGoogle = async authResult => {
+export default (props) => {
+  const responseGoogle = async (authResult) => {
     try {
       if (authResult['code']) {
         const result = await login(authResult['code']);
         console.log(authResult);
         props.login(result);
       } else {
-        // There was an error.
+        throw new Error(authResult);
       }
     } catch (e) {
       console.log(e);
@@ -22,8 +22,8 @@ export default props => {
   return (
     <div className="login-page">
       <GoogleLogin
-        // use your client id here -- this client id would not work
-        clientId="222646766650-gqnkmntgaf988iqc2adh61rnge1310q8.apps.googleusercontent.com"
+        // use your client id here
+        clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
         buttonText="Login with google"
         responseType="code"
         /**
