@@ -1,6 +1,7 @@
 # mern-google-login
 
-Authentication flow for MERN stack application using google OAuth 2.0
+Authentication flow for MERN stack application using google OAuth 2.0. 
+
 This oauth flow is more secure and you don't have to reload your react app and go through multiple redirections to authenticate client.
 
 ## App flow
