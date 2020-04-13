@@ -28,8 +28,10 @@ cd client & npm install
 
 ### 2. Obtain OAuth 2.0 credentials from the Google API Console.
 
-Visit the [Google API Console](https://console.developers.google.com/) to obtain OAuth 2.0 credentials such as a client ID and client secret that are known to both Google and your application. Don't store your client secret in your React app. You only need client id in your react app to get the authorization grant code. And you should store client secret in node app.
-**Note: You can use authorization grant code only one time.**
+Visit the [Google API Console](https://console.developers.google.com/) to obtain OAuth 2.0 credentials such as a client ID and client secret that are known to both Google and your application. 
+Don't store your client secret in your React app. You only need client id in your react app to get the authorization grant code. 
+And you should store client secret in node app. 
+
 
 ### 3. Add Authorized JavaScript Origins
 
@@ -37,8 +39,9 @@ Go to [Google API Console](https://console.developers.google.com/). And select y
 ![Capture](https://user-images.githubusercontent.com/29760858/65677289-c3582600-e06a-11e9-8a69-564a89dbe522.PNG)
 
 **This is a url of client side react app**
-
-**You'll notice in my code that I set the `redirect_uri` to `postmessage`, its because we need the access_token & id_token without any redirection**
+ 
+ 
+**You'll notice in my code that I set the `redirect_uri` to `postmessage`, its because we need the authorization grant code without any redirection**
 
 ### 4. Client Side Setup
 
