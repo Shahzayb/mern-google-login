@@ -1,5 +1,7 @@
 # mern-google-login
 
+**Note from [google](https://developers.google.com/identity/sign-in/web/server-side-flow): We are discontinuing the [Google Sign-In JavaScript Platform Library](https://developers.googleblog.com/2021/08/gsi-jsweb-deprecation.html) for web. For authentication and user sign-in, use the new Google Identity Services SDKs for both [Web](https://developers.google.com/identity/gsi/web) and Android instead.**
+
 Authentication flow for MERN stack application using google OAuth 2.0. 
 
 This oauth flow is more secure and you don't have to reload your react app and go through multiple redirections to authenticate client.
